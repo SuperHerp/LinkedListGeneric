@@ -1,0 +1,15 @@
+C:\Users\simon\Documents\Code\LL\bin\Debug\net7.0\LL.deps.json
+C:\Users\simon\Documents\Code\LL\bin\Debug\net7.0\LL.dll
+C:\Users\simon\Documents\Code\LL\bin\Debug\net7.0\LL.pdb
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.csproj.AssemblyReference.cache
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.AssemblyInfoInputs.cache
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.AssemblyInfo.cs
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.csproj.CoreCompileInputs.cache
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.dll
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\refint\LL.dll
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.pdb
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\ref\LL.dll
+C:\Users\simon\Documents\Code\LL\bin\Debug\net7.0\LL.exe
+C:\Users\simon\Documents\Code\LL\bin\Debug\net7.0\LL.runtimeconfig.json
+C:\Users\simon\Documents\Code\LL\obj\Debug\net7.0\LL.genruntimeconfig.cache
