@@ -5,11 +5,11 @@ interface print
     void print();
 }
 
-interface compare<T>{
+interface Compare<T>{
     int compare(T ob2);
 }
 
-public class Schueler : IComparable, print, compare<Schueler>{
+public class Schueler : IComparable, print, Compare<Schueler>{
     private int SchuelerNr;
     private string Name;
     private string Telefon;
