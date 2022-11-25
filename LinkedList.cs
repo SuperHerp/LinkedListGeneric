@@ -1,9 +1,9 @@
 using System;
-class LinkedList<T> where T : class, IComparable, print, compare<T>
+class LinkedList<T> where T : class, print, Compare<T>
 {
-    private LinkedList<T> Next;
-    private LinkedList<T> Previous;
-    private T Data;
+    public LinkedList<T> Next;
+    public LinkedList<T> Previous;
+    public T Data;
 
 
     public LinkedList(T data){
@@ -93,6 +93,76 @@ class LinkedList<T> where T : class, IComparable, print, compare<T>
             cur.Data.print();
             Console.WriteLine("-->");
             cur = cur.Next;
+        }
+    }
+
+    private void insertBefore(LinkedList<T> insert){
+        LinkedList<T> cur = this;
+        if(cur.Previous == null){
+            cur.Previous = insert;
+            cur.Next = insert.Next;
+            insert.Next = cur;
+            insert.Previous = null;
+        }else{
+            insert.Previous = cur.Previous;
+            cur.Next = insert.Next;
+            insert.Next = cur;
+            cur.Previous = insert;
+        }
+    }
+
+    private void insertAfter(LinkedList <T> insert){
+        LinkedList<T> cur = this;
+        if(cur.Next == null){
+            insert.Next = null;
+            cur.Previous = insert.Previous;
+            insert.Previous = cur;
+            cur.Next = insert;
+
+        }
+    }
+
+    private void swapNext (){
+        LinkedList<T> cur = this;
+        LinkedList<T> next = this.Next;
+
+        // Orange
+        cur.Next = next.Next;
+        next.Next.Previous = cur;
+        // Green
+        next.Previous = cur.Previous;
+        cur.Previous.Next = next;
+        // Blue
+        next.Next = cur;
+        cur.Previous = next;
+
+    }
+
+    public void sort(){
+        LinkedList<T> cur = this.giveHead();
+        bool sorted = false;
+        bool swapped = false;
+        while(!sorted){
+            int compRes = cur.Data.compare(cur.Next.Data);
+            switch(compRes){
+                case (1):
+                    cur.swapNext();
+                    swapped = true;
+                    break;
+                case (0):
+                case (-1):
+                    cur = cur.Next;
+                    break;
+            }
+
+            if(cur.Next == null){
+                if(swapped == false){
+                    sorted = true;
+                }else{
+                    swapped = false;
+                    cur = cur.giveHead();
+                }
+            }
         }
     }
 
